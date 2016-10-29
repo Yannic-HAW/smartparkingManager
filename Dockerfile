@@ -7,7 +7,8 @@ RUN apt-get update && apt-get install -y \
   npm \
   build-essential \
   git \
-  python
+  python \
+  libkrb5-dev
 
 RUN mkdir /root/.ssh
 RUN touch /root/.ssh/known_hosts
