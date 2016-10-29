@@ -4,6 +4,7 @@ MAINTAINER Yannic Wilkening
 
 RUN apt-get update && apt-get install -y \
   nodejs \
+  nodejs-legacy \
   npm \
   build-essential \
   gcc \
