@@ -6,12 +6,15 @@ RUN apt-get update && apt-get install -y \
   nodejs \
   npm \
   build-essential \
+  gcc \
+  make \
   git \
   python \
   libkrb5-dev \
   librsvg2-2 \
   librsvg2-dev \
-  libicu-dev
+  libicu-dev \
+  node-gyp
 
 RUN mkdir /root/.ssh
 RUN touch /root/.ssh/known_hosts
@@ -24,8 +27,6 @@ RUN ssh-keyscan iot.iavtech.net >> /root/.ssh/known_hosts
 RUN git clone git@iot.iavtech.net:smartParking
 
 RUN rm -rf /root/.ssh/id_rsa
-
-RUN python --version
 
 RUN cd ./smartParking/01_Crossbar; npm install;
 
