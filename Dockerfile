@@ -2,17 +2,13 @@ FROM ubuntu
 
 MAINTAINER Yannic Wilkening
 
-RUN mkdir ~/.ssh
-RUN touch ~/.ssh/known_hosts
-RUN chmod 600 ~/.ssh/known_hosts
+RUN mkdir /root/.ssh
+RUN touch /root/.ssh/known_hosts
+RUN chmod 600 /root/.ssh/known_hosts
 
-RUN mkdir /root/test
-ADD ./id_rsa /root/test/
-RUN cat /root/test/id_rsa
-
-ADD ./id_rsa .ssh/
-RUN ls -l ~/.ssh/
-RUN chmod 600 ~/.ssh/id_rsa
+ADD ./id_rsa /root/.ssh/
+RUN ls -l /root/.ssh
+RUN chmod 600 /root/.ssh/id_rsa
 
 RUN apt-get update && apt-get install -y \
   nodejs \
