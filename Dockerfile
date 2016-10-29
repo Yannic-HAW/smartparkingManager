@@ -21,6 +21,9 @@ RUN git clone git@iot.iavtech.net:smartParking
 RUN rm -rf /root/.ssh/id_rsa
 
 RUN ls -l */
-RUN cd */smartParking/01_Crossbar; npm install; 
+RUN cd */smartParking/01_Crossbar; npm install;
+
+WORKDIR */smartParking/01_Crossbar
+CMD ["npm", "start"]
 
 EXPOSE 8080
