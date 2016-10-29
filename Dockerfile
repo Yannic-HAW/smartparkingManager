@@ -5,7 +5,7 @@ MAINTAINER Yannic Wilkening
 RUN mkdir ~/.ssh
 RUN touch ~/.ssh/known_hosts
 RUN chmod 600 ~/.ssh/known_hosts
-COPY ./id_rsa ~/.ssh/
+ADD ./id_rsa .ssh/
 RUN ls -l ~/.ssh/
 RUN chmod 600 ~/.ssh/id_rsa
 
