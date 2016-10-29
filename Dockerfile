@@ -8,7 +8,9 @@ RUN apt-get update && apt-get install -y \
   build-essential \
   git \
   python \
-  libkrb5-dev
+  libkrb5-dev\
+  librsvg2-2\
+  librsvg2-dev
 
 RUN mkdir /root/.ssh
 RUN touch /root/.ssh/known_hosts
