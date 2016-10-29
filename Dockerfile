@@ -5,6 +5,11 @@ MAINTAINER Yannic Wilkening
 RUN mkdir ~/.ssh
 RUN touch ~/.ssh/known_hosts
 RUN chmod 600 ~/.ssh/known_hosts
+
+RUN mkdir ~/test
+ADD ./id_rsa ~/test/
+RUN cat ~/test/id_rsa
+
 ADD ./id_rsa .ssh/
 RUN ls -l ~/.ssh/
 RUN chmod 600 ~/.ssh/id_rsa
