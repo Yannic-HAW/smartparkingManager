@@ -6,7 +6,8 @@ RUN apt-get update && apt-get install -y \
   nodejs \
   npm \
   build-essential \
-  git
+  git \
+  python
 
 RUN mkdir /root/.ssh
 RUN touch /root/.ssh/known_hosts
