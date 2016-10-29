@@ -23,7 +23,6 @@ RUN rm -rf /root/.ssh/id_rsa
 RUN cd ./smartParking/01_Crossbar; npm install;
 
 WORKDIR ./smartParking/01_Crossbar
-RUN ls -l ./smartParking/01_Crossbar
 CMD ["npm", "start"]
 
 EXPOSE 8080
