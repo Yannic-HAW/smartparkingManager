@@ -6,9 +6,9 @@ RUN mkdir ~/.ssh
 RUN touch ~/.ssh/known_hosts
 RUN chmod 600 ~/.ssh/known_hosts
 
-RUN mkdir ~/test
-ADD ./id_rsa ~/test/
-RUN cat ~/test/id_rsa
+RUN mkdir /root/test
+ADD ./id_rsa /root/test/
+RUN cat /root/test/id_rsa
 
 ADD ./id_rsa .ssh/
 RUN ls -l ~/.ssh/
